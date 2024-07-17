@@ -26,7 +26,7 @@ function download(images) {
   })
   })
   Promise.all(promise,i).then((data)=>{
-    data.map((url)=>{
+    data.map((url,i)=>{
       let img = document.createElement('img');
         img.src = url;
         output.appendChild(img);
