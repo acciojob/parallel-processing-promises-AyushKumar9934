@@ -25,12 +25,12 @@ function download(images) {
     })
   })
   })
-  Promise.all(promise).then((data)=>{
+  Promise.all(promise,i).then((data)=>{
     data.map((url)=>{
       let img = document.createElement('img');
         img.src = url;
         output.appendChild(img);
-
+        img.src=images[i].url;
     })
   }).catch((error)=>console.log(error))
     
